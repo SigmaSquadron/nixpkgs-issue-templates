@@ -11,7 +11,7 @@ body:
             <picture>
               <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/NixOS/nixos-homepage/main/public/logo/nixos-hires.png">
               <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NixOS/nixos-artwork/master/logo/nixos-white.png">
-              <img src="https://raw.githubusercontent.com/NixOS/nixos-homepage/main/public/logo/nixos-hires.png" width="500px" alt="NixOS logo">
+              <img src="https://raw.githubusercontent.com/NixOS/nixos-homepage/main/public/logo/nixos-hires.png" width="400px" alt="NixOS logo">
             </picture>
           </a>
         </p>
@@ -118,6 +118,8 @@ body:
       label: "Notify Maintainers"
       description: |
         Please mention the people who are in the `meta.maintainers` list of the offending module. This is done by prefixing the person's username with an '@' character. You can quickly go to the source code of a module by searching for it on the [NixOS Option Search](https://search.nixos.org/options) and clicking the "Declared in..." button.
+
+        Please note that the maintainer attribute name does not always match the maintainer's GitHub username. If that occurs, try looking in [`maintainers/maintainer-list.nix`](https://github.com/NixOS/nixpkgs/blob/master/maintainers/maintainer-list.nix) for the maintainer attribute name, and checking if the maintainer has a listed GitHub username.
 
         If in doubt, check `git blame` for whoever last touched the package. Please add the mentions above the `---` characters.
       value: |
