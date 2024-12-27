@@ -23,9 +23,9 @@ body:
         > [!IMPORTANT]
         > If you are using an older version, please update to the latest stable version and check if the issue persists before continuing this bug report.
       options:
-        - "Unstable (25.05)"
-        - "Stable (24.11)"
-        - "Oldstable (24.05)"
+        - "- **Unstable (25.05)**"
+        - "- **Stable (24.11)**"
+        - "- **Oldstable (24.05)**"
     validations:
       required: true
   - type: "textarea"
@@ -93,7 +93,7 @@ body:
       placeholder: |
         - system: `"aarch64-linux"`
         - host os: `Linux 1.0.0, NixOS, 17.09 (Hummingbird), a31ce27`
-        - multi-user?: `yes`
+        - multi-user?: `no`
         - sandbox: `yes`
         - version: `nix-env (Nix) 1.0.0`
         - nixpkgs: `/path/to/nixpkgs`
@@ -132,12 +132,13 @@ body:
   - type: "textarea"
     id: "priorisation"
     attributes:
-      label: "Priorisation Template: **Please do not modify!**"
+      label: "Is this issue important to you?"
       description: |
-        This template helps Nixpkgs developers know which issues should be prioritised by allowing users to vote with a :+1: reaction. This is not a guarantee that highly-requested issues will be fixed first, but it helps us to figure out what's important to users. Please react on other users' issues if you find them important.
-      value: |
-        ---
+        **Please do not modify this text area!**
 
+        This template helps Nixpkgs developers know which issues should be prioritised by allowing users to vote with a :+1: reaction.
+        This is not a guarantee that highly-requested issues will be fixed first, but it helps us to figure out what's important to users. Please react on other users' issues if you find them important.
+      value: |
         Add a :+1: [reaction] to [issues you find important].
 
         [reaction]: https://github.blog/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/
