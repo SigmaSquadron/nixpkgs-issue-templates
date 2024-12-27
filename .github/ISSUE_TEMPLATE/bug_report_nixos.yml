@@ -1,7 +1,7 @@
 name: "Bug Report (NixOS Module)"
 description: "Create a bug report against a NixOS Module"
 title: "nixos/MODULENAME: BUG TITLE"
-labels: ["0.kind: bug" "6.topic: nixos"]
+labels: ["0.kind: bug", "6.topic: nixos"]
 body:
   - type: "markdown"
     attributes:
