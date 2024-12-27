@@ -26,7 +26,6 @@ body:
         - "Unstable (25.05)"
         - "Stable (24.11)"
         - "Oldstable (24.05)"
-      default: 0
     validations:
       required: true
   - type: "textarea"
