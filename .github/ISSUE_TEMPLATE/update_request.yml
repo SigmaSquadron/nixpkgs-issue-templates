@@ -57,7 +57,7 @@ body:
       placeholder: "1.0.1"
     validations:
       required: true
-  - type: "textarea"
+  - type: "input"
     id: "nixpkgs-version"
     attributes:
       label: "Nixpkgs Version"
