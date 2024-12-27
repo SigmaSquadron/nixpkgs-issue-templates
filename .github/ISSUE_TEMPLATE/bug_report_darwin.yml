@@ -1,7 +1,7 @@
 name: "Bug Report (macOS)"
 description: "Create a bug report against a package where the issue only occurs on macOS."
 title: "PACKAGENAME: BUG TITLE"
-labels: ["0.kind: bug" "6.topic: darwin"]
+labels: ["0.kind: bug", "6.topic: darwin"]
 body:
   - type: "markdown"
     attributes:
