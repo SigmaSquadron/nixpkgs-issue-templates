@@ -124,7 +124,10 @@ body:
           required: true
   - type: "markdown"
     attributes:
-      value: "Thank you for helping improve Nixpkgs!"
+      value: |
+        # Thank you for helping improve Nixpkgs!
+
+        ---
   - type: "textarea"
     id: "priorisation"
     attributes:
