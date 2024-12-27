@@ -52,6 +52,8 @@ body:
       description: |
         Please mention the people who are in the `meta.maintainers` list of the offending package. This is done by prefixing the person's username with an '@' character. You can quickly go to the `meta` attribute set of a package by searching for it on the [NixOS Package Search](https://search.nixos.org/packages) and clicking the "📦 Source" button.
 
+        Please note that the maintainer attribute name does not always match the maintainer's GitHub username. If that occurs, try looking in [`maintainers/maintainer-list.nix`](https://github.com/NixOS/nixpkgs/blob/master/maintainers/maintainer-list.nix) for the maintainer attribute name, and checking if the maintainer has a listed GitHub username.
+
         If in doubt, check `git blame` for whoever last touched the package. Please add the mentions above the `---` characters.
       value: |
 
