@@ -1,5 +1,5 @@
 name: "Bug Report (Package)"
-description: "Create a generic bug report against a package"
+description: "Create a generic bug report against a package."
 title: "PACKAGENAME: BUG TITLE"
 labels: ["0.kind: bug"]
 body:
@@ -23,9 +23,11 @@ body:
         > [!IMPORTANT]
         > If you are using an older version, please update to the latest stable version and check if the issue persists before continuing this bug report.
       options:
-        - "- Unstable (25.05)"
-        - "- Stable (24.11)"
-        - "- Oldstable (24.05)"
+        - "Please select a version."
+        - "- **Unstable (25.05)**"
+        - "- **Stable (24.11)**"
+        - "- **Oldstable (24.05)**"
+      default: 0
     validations:
       required: true
   - type: "textarea"
@@ -115,13 +117,19 @@ body:
     validations:
       required: false
   - type: "checkboxes"
-    id: "this-is-a-bug"
+    id: "sanity-check"
     attributes:
-      label: "Are you certain this is an issue with NixOS/Nixpkgs?"
+      label: "I assert that this issue is relevant for Nixpkgs"
       description: |
         This bug tracker is for actionable issues that are not the result of user error. If you need help using your system and are unsure if this is a bug with Nixpkgs/NixOS, please consider asking for help on the [NixOS Discourse](https://discourse.nixos.org/) or the [NixOS Matrix Space](https://matrix.to/#/#community:nixos.org) before opening an issue.
+
+        Please also ensure that this bug report is not a [duplicate of an existing issue](https://github.com/NixOS/nixpkgs/issues), and that you have read the [NixOS Code of Conduct](https://github.com/NixOS/.github/blob/master/CODE_OF_CONDUCT.md) and agree to abide by it while communicating in any NixOS space.
       options:
         - label: "I assert that this is a bug and not a support request."
+          required: true
+        - label: "I assert that this is not a duplicate of any known issue."
+          required: true
+        - label: "I assert that I have read the Code of Conduct and agree to abide by it."
           required: true
   - type: "markdown"
     attributes:
