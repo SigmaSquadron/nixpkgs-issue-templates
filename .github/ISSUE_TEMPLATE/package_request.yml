@@ -116,16 +116,15 @@ body:
   - type: "textarea"
     id: "priorisation"
     attributes:
-      label: ""
+      label: "For this package's maintainers:"
       description: |
         **Please do not modify this text area!**
 
         This template helps NixOS developers know which issues should be prioritised by allowing users to vote with a :+1: reaction and also reminds them to tag this issue in their pull requests.
         This is not a guarantee that highly-requested issues will be fixed first, but it helps us to figure out what's important to users. Please react on other users' issues if you find them important.
       value: |
-        ---
 
-        **Note for maintainers:** Please tag this issue in your pull request description. (i.e. `Resolves #ISSUE`.)
+        Please tag this issue in your pull request description. (i.e. `Resolves #ISSUE`.)
 
         ---
 
