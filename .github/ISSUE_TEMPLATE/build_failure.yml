@@ -6,6 +6,16 @@ body:
   - type: "markdown"
     attributes:
       value: |
+        <p align="center">
+         <a href="https://nixos.org">
+           <picture>
+             <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/NixOS/nixos-homepage/main/public/logo/nixos-hires.png">
+             <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NixOS/nixos-artwork/master/logo/nixos-white.png">
+             <img src="https://raw.githubusercontent.com/NixOS/nixos-homepage/main/public/logo/nixos-hires.png" width="500px" alt="NixOS logo">
+           </picture>
+         </a>
+       </p>
+
         Welcome to Nixpkgs. Please replace the **`Build failure: PACKAGENAME`** template above with the correct package name (As seen in the [NixOS Package Search](https://search.nixos.org/packages)).
 
         > [!TIP]
@@ -24,7 +34,7 @@ body:
         > If you are using an older version, please update to the latest stable version and check if the build failure persists before continuing this report.
         > If you are purposefully trying to build an ancient version of a package in an older Nixpkgs, please coordinate with the [NixOS Archivists](https://matrix.to/#/#archivists:nixos.org).
       options:
-        - "Please select a version"
+        - "Please select a version."
         - "- Unstable (25.05)"
         - "- Stable (24.11)"
         - "- Oldstable (24.05)"
@@ -56,11 +66,12 @@ body:
         - If there's a <img src="https://raw.githubusercontent.com/NixOS/hydra/refs/heads/master/src/root/static/images/emojione-question-2754.svg" width="20px" align="top" alt="Gray Question Mark"> icon near the package entry, say '**Hydra is currently rebuilding this package.**'
         - If there's a <img src="https://raw.githubusercontent.com/NixOS/hydra/refs/heads/master/src/root/static/images/emojione-stopsign-1f6d1.svg" width="20px" align="top" alt="Red Stop Sign"> icon near the package entry, then the build job was stopped manually. If this occurs, please coordinate with the [Infrastructure Team](https://matrix.to/#/#infra:nixos.org), and say '**The last build job was manually cancelled.**'
       options:
+        - "Please select the Hydra Status."
         - "Yes, Hydra can reproduce this build failure."
         - "No, Hydra cannot reproduce this build failure."
         - "Hydra is currently rebuilding this package."
         - "The last build job was manually cancelled."
-      default: 1
+      default: 0
     validations:
       required: true
   - type: "input"
