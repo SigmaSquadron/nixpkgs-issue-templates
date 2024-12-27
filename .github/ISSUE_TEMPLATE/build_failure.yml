@@ -9,7 +9,7 @@ body:
         Welcome to Nixpkgs. Please replace the **`Build failure: PACKAGENAME`** template above with the correct package name (As seen in the [NixOS Package Search](https://search.nixos.org/packages)).
 
         > [!TIP]
-        > For instance, if you were filing a build failure against the [`hello`](https://search.nixos.org/packages?channel=unstable&from=0&size=1&buckets=%7B%22package_attr_set%22%3A%5B%22No%20package%20set%22%5D%2C%22package_license_set%22%3A%5B%22GNU%20General%20Public%20License%20v3.0%20or%20later%22%5D%2C%22package_maintainers_set%22%3A%5B%5D%2C%22package_platforms%22%3A%5B%5D%7D&sort=relevance&type=packages&query=hello), your title would be as follows:
+        > For instance, if you were filing a build failure against the [`hello`](https://search.nixos.org/packages?channel=unstable&from=0&size=1&buckets=%7B%22package_attr_set%22%3A%5B%22No%20package%20set%22%5D%2C%22package_license_set%22%3A%5B%22GNU%20General%20Public%20License%20v3.0%20or%20later%22%5D%2C%22package_maintainers_set%22%3A%5B%5D%2C%22package_platforms%22%3A%5B%5D%7D&sort=relevance&type=packages&query=hello) package, your title would be as follows:
         > `Build failure: hello`
 
         ---
@@ -39,7 +39,7 @@ body:
       placeholder: |
         1. build *hello*.
       value: |
-        1. build *X*.
+        1. build *PACKAGENAME*.
     validations:
       required: true
   - type: "dropdown"
@@ -49,11 +49,12 @@ body:
       description: |
         Can [Hydra](https://hydra.nixos.org), Nixpkgs' Continuous Integration system, reproduce this build failure?
         Please use the search function in the header bar to locate the last build job for the package in question.
-        - If there's a red 'X' near the package entry, say 'Yes'.
-        - If there's a black 'X' near the package entry, then the build failure occurs with another package, and you need to track the original failing package by going down the chain of 'Cached failures' until you reach the final package in the failing dependency chain.
-        - If there's a green tick mark near the package entry, then it most likely means it's a local issue with your system. (Maybe you ran out of space?)
+        - If there's a <img src="https://raw.githubusercontent.com/NixOS/hydra/refs/heads/master/src/root/static/images/emojione-red-x-274c.svg" width="24px" align="top" alt="Red X"> icon near the package entry, say 'Yes'.
+        - If there's a <img src="https://raw.githubusercontent.com/NixOS/hydra/refs/heads/master/src/root/static/images/emojione-gray-x-2716.svg" width="24px" align="top" alt="Dark Gray X"> icon near the package entry, then the build failure occurs with another package, and you need to track the original failing package by going down the chain of 'Cached failures' until you reach the final package in the failing dependency chain.
+        - If there's a <img src="https://raw.githubusercontent.com/NixOS/hydra/refs/heads/master/src/root/static/images/emojione-check-2714.svg" width="24px" align="top" alt="Green Check Mark"> icon near the package entry, then it most likely means it's a local issue with your system. (Maybe you ran out of space?)
           You can still open a build failure report, but please mention that Hydra cannot reproduce this failure below.
-        - If there's a gray question mark near the package entry, say that Hydra is currently rebuilding this package.
+        - If there's a <img src="https://raw.githubusercontent.com/NixOS/hydra/refs/heads/master/src/root/static/images/emojione-question-2754.svg" width="24px" align="top" alt="Gray Question Mark"> icon near the package entry, say that Hydra is currently rebuilding this package.
+        - If there's a <img src="https://raw.githubusercontent.com/NixOS/hydra/refs/heads/master/src/root/static/images/emojione-stopsign-1f6d1.svg" width="24px" align="top" alt="Red Stop Sign"> icon near the package entry, then the build job was stopped manually. If this occurs, please coordinate with the [Infrastructure Team](https://matrix.to/#/#infra:nixos.org).
       options:
         - "Yes, Hydra can reproduce this build failure."
         - "No, Hydra cannot reproduce this build failure."
