@@ -1,4 +1,4 @@
-name: "Request: Package Update"
+name: "Request: package update"
 description: "Create an update request for an existing, but outdated package."
 title: "Update Request: PACKAGENAME OLDVERSION → NEWVERSION"
 labels: ["0.kind: enhancement", "9.needs: package (update)"]
@@ -29,13 +29,13 @@ body:
   - type: "dropdown"
     id: "version"
     attributes:
-      label: "Nixpkgs Version"
+      label: "Nixpkgs version"
       description: |
         What version of Nixpkgs are you using?
 
         > [!IMPORTANT]
         > If you are using an older or stable version, please update to the latest **unstable** version and check if the package is still out of date.
-        > If the package has been updated in unstable, but you believe the update should be backported to the stable release of Nixpkgs, please file the '**Request for Backport to Stable**' form instead.
+        > If the package has been updated in unstable, but you believe the update should be backported to the stable release of Nixpkgs, please file the '**Request: backport to stable**' form instead.
       options:
         - "Please select a version."
         - "- Unstable (25.05)"
@@ -47,27 +47,24 @@ body:
   - type: "input"
     id: "name"
     attributes:
-      label: "Package Name"
+      label: "Package name"
       description: "Please indicate the name of the package."
-      placeholder: "hello"
     validations:
       required: true
   - type: "input"
     id: "upstream-version"
     attributes:
-      label: "Upstream Version"
+      label: "Upstream version"
       description: "Please indicate the latest version of the package."
-      placeholder: "1.0.1"
     validations:
       required: true
   - type: "input"
     id: "nixpkgs-version"
     attributes:
-      label: "Nixpkgs Version"
+      label: "Nixpkgs version"
       description: |
         Please indicate the current version number in Nixpkgs' **unstable** channel. You can check this by setting the [NixOS Package Search](https://search.nixos.org/packages?channel=unstable) channel to 'unstable' and searching for the package.
-        If you meant to request an upgrade in the stable channel, please file the '**Request for Backport to Stable**' form instead.
-      placeholder: "1.0.0"
+        If you meant to request an upgrade in the stable channel, please file the '**Request: backport to stable**' form instead.
     validations:
       required: true
   - type: "input"
@@ -75,13 +72,12 @@ body:
     attributes:
       label: "Changelog"
       description: "If applicable, please link the upstream changelog for the latest version."
-      placeholder: "https://git.savannah.gnu.org/cgit/hello.git/plain/NEWS"
     validations:
       required: false
   - type: "textarea"
     id: "maintainers"
     attributes:
-      label: "Notify Maintainers"
+      label: "Notify maintainers"
       description: |
         Please mention the people who are in the **Maintainers** list of the offending package. This is done by by searching for the package on the [NixOS Package Search](https://search.nixos.org/packages) and mentioning the people listed under **Maintainers** by prefixing their GitHub usernames with an '@' character. Please add the mentions above the `---` characters in the template below.
       value: |
@@ -109,7 +105,7 @@ body:
 
         ---
   - type: "textarea"
-    id: "priorisation"
+    id: "prioritisation"
     attributes:
       label: "Is this issue important to you?"
       description: |

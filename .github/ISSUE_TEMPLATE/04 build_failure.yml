@@ -1,4 +1,4 @@
-name: "Build Failure"
+name: "Build failure"
 description: "Report a package that is failing to build."
 title: "Build failure: PACKAGENAME"
 labels: ["0.kind: build failure"]
@@ -26,7 +26,7 @@ body:
   - type: "dropdown"
     id: "version"
     attributes:
-      label: "Nixpkgs Version"
+      label: "Nixpkgs version"
       description: |
         In what version of Nixpkgs did the build failure occur?
 
@@ -44,12 +44,8 @@ body:
   - type: "textarea"
     id: "how-to-reproduce"
     attributes:
-      label: "Steps to Reproduce"
-      description: "Please include a step-by-step guide for reproducing this build failure."
-      placeholder: |
-        1. build *hello*.
-      value: |
-        1. build *PACKAGENAME*.
+      label: "Steps to reproduce"
+      description: "Please include a step-by-step guide for reproducing this build failure. Consider writing in concise, numbered bullet points to ensure that Nixpkgs developers can retrace your steps."
     validations:
       required: true
   - type: "dropdown"
@@ -77,9 +73,8 @@ body:
   - type: "input"
     id: "hydra-logs"
     attributes:
-      label: "Link to Hydra Job"
+      label: "Link to Hydra build job"
       description: "If you answered 'yes' in the question above, please copy-and-paste the link to the failing Hydra job here."
-      placeholder: "https://hydra.nixos.org/build/1"
     validations:
       required: false
   - type: "textarea"
@@ -95,29 +90,21 @@ body:
   - type: "textarea"
     id: "additional-context"
     attributes:
-      label: "Additional Context"
+      label: "Additional context"
       description: "Add any other context about the problem here."
-      placeholder: "This issue only happens when sandboxing is disabled."
     validations:
       required: false
   - type: "textarea"
     id: "metadata"
     attributes:
-      label: "System Metadata"
+      label: "System metadata"
       description: "Please run `nix-shell -p nix-info --run \"nix-info -m\"` on a terminal and paste the output of that command here."
-      placeholder: |
-        - system: `"aarch64-linux"`
-        - host os: `Linux 1.0.0, NixOS, 17.09 (Hummingbird), a31ce27`
-        - multi-user?: `no`
-        - sandbox: `yes`
-        - version: `nix-env (Nix) 1.0.0`
-        - nixpkgs: `/path/to/nixpkgs`
     validations:
       required: true
   - type: "textarea"
     id: "maintainers"
     attributes:
-      label: "Notify Maintainers"
+      label: "Notify maintainers"
       description: |
         Please mention the people who are in the **Maintainers** list of the offending package. This is done by by searching for the package on the [NixOS Package Search](https://search.nixos.org/packages) and mentioning the people listed under **Maintainers** by prefixing their GitHub usernames with an '@' character. Please add the mentions above the `---` characters in the template below.
       value: |
@@ -147,7 +134,7 @@ body:
 
         ---
   - type: "textarea"
-    id: "priorisation"
+    id: "prioritisation"
     attributes:
       label: "Is this issue important to you?"
       description: |

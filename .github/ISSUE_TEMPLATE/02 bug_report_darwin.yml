@@ -1,4 +1,4 @@
-name: "Bug Report (macOS)"
+name: "Bug report (macOS)"
 description: "Create a bug report against a package where the issue only occurs on macOS."
 title: "PACKAGENAME: BUG TITLE"
 labels: ["0.kind: bug", "6.topic: darwin"]
@@ -26,7 +26,7 @@ body:
   - type: "dropdown"
     id: "version"
     attributes:
-      label: "Nixpkgs Version"
+      label: "Nixpkgs version"
       description: |
         What version of Nixpkgs are you using?
 
@@ -43,31 +43,22 @@ body:
   - type: "textarea"
     id: "description"
     attributes:
-      label: "Describe the Bug"
+      label: "Describe the bug"
       description: "Please include a clear and concise description of what the issue is."
-      placeholder: "Launching `hello` through the terminal on my Apple Silicon machine results in the following error..."
     validations:
       required: true
   - type: "textarea"
     id: "how-to-reproduce"
     attributes:
-      label: "Steps to Reproduce"
-      description: "Please include a step-by-step guide for reproducing this issue."
-      placeholder: |
-        1. Ensure you are running Nix on macOS in an ARM machine.
-        2. Launch `hello` using the terminal with `nix run nixpkgs#hello`.
-      value: |
-        1. ...
-        2. ...
-        3. ...
+      label: "Steps to reproduce"
+      description: "Please include a step-by-step guide for reproducing this issue. Consider writing in concise, numbered bullet points to ensure that Nixpkgs developers can retrace your steps."
     validations:
       required: true
   - type: "input"
     id: "expected-behaviour"
     attributes:
-      label: "Expected Behaviour"
-      description: "Please write a consise description of what was supposed to happen."
-      placeholder: "`hello` would launch normally."
+      label: "Expected behaviour"
+      description: "Please write a concise description of what was supposed to happen."
     validations:
       required: true
   - type: "textarea"
@@ -92,23 +83,15 @@ body:
   - type: "textarea"
     id: "additional-context"
     attributes:
-      label: "Additional Context"
+      label: "Additional context"
       description: "Add any other context about the problem here."
-      placeholder: "This issue only happens when `NIX_DONT_SET_RPATH_FOR_TARGET` is set."
     validations:
       required: false
   - type: "textarea"
     id: "metadata"
     attributes:
-      label: "System Metadata"
+      label: "System metadata"
       description: "Please run `nix-shell -p nix-info --run \"nix-info -m\"` on a terminal and paste the output of that command here."
-      placeholder: |
-        - system: `"x86_64-darwin"`
-        - host os: `Darwin 1.0.0, macOS 10.0`
-        - multi-user?: `yes`
-        - sandbox: `no`
-        - version: `nix-env (Nix) 1.0.0`
-        - nixpkgs: `/path/to/nixpkgs`
     validations:
       required: true
   - type: "dropdown"
@@ -126,7 +109,7 @@ body:
   - type: "textarea"
     id: "maintainers"
     attributes:
-      label: "Notify Maintainers"
+      label: "Notify maintainers"
       description: |
         Please mention the people who are in the **Maintainers** list of the offending package. This is done by by searching for the package on the [NixOS Package Search](https://search.nixos.org/packages) and mentioning the people listed under **Maintainers** by prefixing their GitHub usernames with an '@' character. Please add the mentions above the `---` characters in the template below.
 
@@ -158,7 +141,7 @@ body:
 
         ---
   - type: "textarea"
-    id: "priorisation"
+    id: "prioritisation"
     attributes:
       label: "Is this issue important to you?"
       description: |

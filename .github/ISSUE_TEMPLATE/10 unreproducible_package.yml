@@ -60,7 +60,7 @@ body:
   - type: "textarea"
     id: "how-to-reproduce"
     attributes:
-      label: "Steps to Reproduce"
+      label: "Steps to reproduce"
       description: |
         This is a step-by-step instruction set meant for maintainers to debug the package that is failing to reproduce. You should also follow it to gather the `diffoscope` logs that will be needed below.
         Please replace **PACKAGENAME** below with the canonical package name of the package, as you have done for the introduction and the title above.
@@ -114,7 +114,7 @@ body:
   - type: "textarea"
     id: "logs"
     attributes:
-      label: "Diffoscope Log"
+      label: "Diffoscope log"
       description: |
         Please copy and paste the relevant `diffoscope` log output, gathered from the steps above.
         This will be automatically formatted into a `diff`, so no need for backticks.
@@ -124,15 +124,14 @@ body:
   - type: "textarea"
     id: "additional-context"
     attributes:
-      label: "Additional Context"
+      label: "Additional context"
       description: "Add any other context about the problem here."
-      placeholder: "This reproducibility issue only happens when the package has all of its optional features enabled."
     validations:
       required: false
   - type: "textarea"
     id: "maintainers"
     attributes:
-      label: "Notify Maintainers"
+      label: "Notify maintainers"
       description: |
         Please mention the people who are in the **Maintainers** list of the offending package. This is done by by searching for the package on the [NixOS Package Search](https://search.nixos.org/packages) and mentioning the people listed under **Maintainers** by prefixing their GitHub usernames with an '@' character. Please add the mentions above the `---` characters in the template below.
       value: |
@@ -158,7 +157,7 @@ body:
 
         ---
   - type: "textarea"
-    id: "priorisation"
+    id: "prioritisation"
     attributes:
       label: "Is this issue important to you?"
       description: |

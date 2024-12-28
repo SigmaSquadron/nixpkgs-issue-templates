@@ -1,4 +1,4 @@
-name: "Request: NixOS Module"
+name: "Request: NixOS module"
 description: "Create a new NixOS Module request for an existing package."
 title: "Module Request: nixos/MODULENAME"
 labels: ["0.kind: enhancement", "6.topic: nixos", "9.needs: module (new)"]
@@ -26,7 +26,7 @@ body:
   - type: "dropdown"
     id: "version"
     attributes:
-      label: "Nixpkgs Version"
+      label: "Nixpkgs version"
       description: |
         What version of Nixpkgs are you using?
 
@@ -43,23 +43,21 @@ body:
   - type: "textarea"
     id: "description"
     attributes:
-      label: "Describe the Proposed Module"
+      label: "Describe the proposed module"
       description: "Please include a clear and concise description of what the module should accomplish."
-      placeholder: "GNU `hello` needs a systemd service to start the server-side Hello World application."
     validations:
       required: true
   - type: "textarea"
     id: "additional-context"
     attributes:
-      label: "Additional Context"
+      label: "Additional context"
       description: "Add any other context about the proposed module here."
-      placeholder: "This was originally discussed in the NixOS Hello World Team."
     validations:
       required: false
   - type: "textarea"
     id: "maintainers"
     attributes:
-      label: "Notify Maintainers"
+      label: "Notify maintainers"
       description: |
         Please mention the people who are in the **Maintainers** list of the offending package. This is done by by searching for the package on the [NixOS Package Search](https://search.nixos.org/packages) and mentioning the people listed under **Maintainers** by prefixing their GitHub usernames with an '@' character. Please add the mentions above the `---` characters in the template below.
       value: |
@@ -87,7 +85,7 @@ body:
 
         ---
   - type: "textarea"
-    id: "priorisation"
+    id: "prioritisation"
     attributes:
       label: "Is this issue important to you?"
       description: |

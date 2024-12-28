@@ -1,4 +1,4 @@
-name: "Request: Documentation"
+name: "Request: documentation"
 description: "Report missing or incorrect documentation in the NixOS or Nixpkgs manuals."
 title: "Missing Documentation: PACKAGENAME"
 labels: ["0.kind: enhancement", "9.needs: documentation"]
@@ -26,29 +26,24 @@ body:
   - type: "textarea"
     id: "description"
     attributes:
-      label: "Describe the Problem"
+      label: "Describe the problem"
       description: "Please include a clear and concise description of what the issue is."
-      placeholder: "The documentation should note that `hello` needs a wrapper to launch."
     validations:
       required: true
   - type: "textarea"
     id: "proposal"
     attributes:
-      label: "Proposed Solution"
+      label: "Proposed solution"
       description: |
         If possible, please draft a tentative documentation chapter to resolve this issue.
         Your proposal should be written in CommonMark Markdown, optionally enhanced with [Nix-specific extensions](https://github.com/NixOS/nixpkgs/tree/master/doc#syntax).
-      placeholder: |
-        # Hello, World {#chap-hello}
-
-        The `GNU Hello` package requires extra steps to work correctly. Try doing **this**:
       render: "markdown"
     validations:
       required: false
   - type: "textarea"
     id: "maintainers"
     attributes:
-      label: "Notify Maintainers"
+      label: "Notify maintainers"
       description: |
         Please mention the people who are in the **Maintainers** list of the offending package. This is done by by searching for the package on the [NixOS Package Search](https://search.nixos.org/packages) and mentioning the people listed under **Maintainers** by prefixing their GitHub usernames with an '@' character. Please add the mentions above the `---` characters in the template below.
       value: |

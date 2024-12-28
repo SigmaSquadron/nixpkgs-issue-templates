@@ -1,4 +1,4 @@
-name: "Tracking Issue"
+name: "Tracking issue"
 description: "Create a tracking issue that coordinates a large tree-wide effort."
 title: "Tracking Issue: ISSUENAME"
 labels: ["5.scope: tracking"]
@@ -25,38 +25,31 @@ body:
   - type: "textarea"
     id: "description"
     attributes:
-      label: "Tracking Description"
+      label: "Tracking description"
       description: |
         Provide a brief summary of the project or multi-step effort. Explain why it is necessary and what the goals are.
         You may include way to reproduce the problem, screenshots or any information that you find relevant.
-      placeholder: "We need to fix every single bug in Nixpkgs!"
     validations:
       required: true
   - type: "textarea"
     id: "tracked-issues"
     attributes:
-      label: "Tracked Issues"
+      label: "Tracked issues"
       description: "Please reference tracked issues and pull requests here. Remember to add the `5.scope: tracked` label to all items referenced here."
-      placeholder: |
-        1. #23845 | policy: should we fix all bugs?
-        2. #23933 | treewide: fix all bugs
-        3. #23934 | treewide: fix all bugs, part 2
     validations:
       required: true
   - type: "textarea"
     id: "additional-issues"
     attributes:
-      label: "Follow-up Issues"
+      label: "Follow-up issues"
       description: "List any follow-up issues that need to be addressed after the main tasks are completed, or any notes related to the project's completion."
-      placeholder: "After fixing all the bugs, we should look into #23994, which reintroduces all of the bugs we will fix."
     validations:
       required: false
   - type: "textarea"
     id: "additional-context"
     attributes:
-      label: "Additional Context"
+      label: "Additional context"
       description: "Add any other context about the tracking issue here."
-      placeholder: "This tracking issue will be resolved in the next NixCon sprint!"
     validations:
       required: false
   - type: "markdown"
@@ -68,7 +61,7 @@ body:
 
         ---
   - type: "textarea"
-    id: "priorisation"
+    id: "prioritisation"
     attributes:
       label: "Is this issue important to you?"
       description: |

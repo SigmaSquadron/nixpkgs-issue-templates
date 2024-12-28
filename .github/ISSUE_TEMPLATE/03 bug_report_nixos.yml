@@ -1,4 +1,4 @@
-name: "Bug Report (NixOS Module)"
+name: "Bug report (NixOS module)"
 description: "Create a bug report against a NixOS Module."
 title: "nixos/MODULENAME: BUG TITLE"
 labels: ["0.kind: bug", "6.topic: nixos"]
@@ -19,14 +19,14 @@ body:
         Welcome to Nixpkgs. Please replace the **`nixos/MODULENAME: BUG TITLE`** template above with the correct module name (As seen in the [NixOS Option Search](https://search.nixos.org/options)) and a short title summarising what the bug entails.
 
         > [!TIP]
-        > For instance, if you were filing a bug against the [`systemd-boot`](https://search.nixos.org/options?channel=unstable&show=boot.loader.systemd-boot.enable&from=0&size=1) module about it failing to install `memtest86`, your title would be as follows:
+        > For instance, if you were filing a bug against the [`systemd-boot`](https://search.nixos.org/options?channel=unstable&show=boot.loader.systemd-boot.enable&from=0&size=1) module about it failing to install [`memtest86`](https://search.nixos.org/options?channel=unstable&show=boot.loader.systemd-boot.memtest86.enable&from=0&size=1), your title would be as follows:
         > `nixos/systemd-boot: fails to install memtest86`
 
         ---
   - type: "dropdown"
     id: "version"
     attributes:
-      label: "Nixpkgs Version"
+      label: "Nixpkgs version"
       description: |
         What version of Nixpkgs are you using?
 
@@ -43,32 +43,22 @@ body:
   - type: "textarea"
     id: "description"
     attributes:
-      label: "Describe the Bug"
+      label: "Describe the bug"
       description: "Please include a clear and concise description of what the issue is."
-      placeholder: "`systemd-boot` doesn't install memtest86 if the `boot.loader.systemd-boot.memtest86.enable` option is set to true."
     validations:
       required: true
   - type: "textarea"
     id: "how-to-reproduce"
     attributes:
-      label: "Steps to Reproduce"
-      description: "Please include a step-by-step guide for reproducing this issue."
-      placeholder: |
-        1. Install NixOS on an EFI system with systemd-boot enabled.
-        2. Try to enable the `boot.loader.systemd-boot.memtest86.enable` option.
-        3. Observe as the memory test option does not appear in the boot menu.
-      value: |
-        1. ...
-        2. ...
-        3. ...
+      label: "Steps to reproduce"
+      description: "Please include a step-by-step guide for reproducing this issue. Consider writing in concise, numbered bullet points to ensure that Nixpkgs developers can retrace your steps."
     validations:
       required: true
   - type: "input"
     id: "expected-behaviour"
     attributes:
-      label: "Expected Behaviour"
-      description: "Please write a consise description of what was supposed to happen."
-      placeholder: "`memtest86` would appear in the boot menu."
+      label: "Expected behaviour"
+      description: "Please write a concise description of what was supposed to happen."
     validations:
       required: true
   - type: "textarea"
@@ -93,29 +83,21 @@ body:
   - type: "textarea"
     id: "additional-context"
     attributes:
-      label: "Additional Context"
+      label: "Additional context"
       description: "Add any other context about the problem here."
-      placeholder: "There are no errors in the systemd-boot-builder log."
     validations:
       required: false
   - type: "textarea"
     id: "metadata"
     attributes:
-      label: "System Metadata"
+      label: "System metadata"
       description: "Please run `nix-shell -p nix-info --run \"nix-info -m\"` on a terminal and paste the output of that command here."
-      placeholder: |
-        - system: `"aarch64-linux"`
-        - host os: `Linux 1.0.0, NixOS, 17.09 (Hummingbird), a31ce27`
-        - multi-user?: `no`
-        - sandbox: `yes`
-        - version: `nix-env (Nix) 1.0.0`
-        - nixpkgs: `/path/to/nixpkgs`
     validations:
       required: true
   - type: "textarea"
     id: "maintainers"
     attributes:
-      label: "Notify Maintainers"
+      label: "Notify maintainers"
       description: |
         Please mention the people who are in the `meta.maintainers` list of the offending module. This is done by prefixing the person's username with an '@' character. You can quickly go to the source code of a module by searching for it on the [NixOS Option Search](https://search.nixos.org/options) and clicking the "Declared in..." button.
 
@@ -149,7 +131,7 @@ body:
 
         ---
   - type: "textarea"
-    id: "priorisation"
+    id: "prioritisation"
     attributes:
       label: "Is this issue important to you?"
       description: |
