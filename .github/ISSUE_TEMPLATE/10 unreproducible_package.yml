@@ -36,7 +36,7 @@ body:
         - "Please select a version."
         - "- Unstable (25.05)"
         - "- Stable (24.11)"
-        - "- Deprecated (24.05)"
+        - "- Previous Stable (24.05)"
       default: 0
     validations:
       required: true
