@@ -1,0 +1,83 @@
+name: "Tracking Issue"
+description: "Create a tracking issue that coordinates a large tree-wide effort."
+title: "Tracking Issue: ISSUENAME"
+labels: ["5.scope: tracking"]
+body:
+  - type: "markdown"
+    attributes:
+      value: |
+        <p align="center">
+          <a href="https://nixos.org">
+            <picture>
+              <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/NixOS/nixos-homepage/main/public/logo/nixos-hires.png">
+              <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/NixOS/nixos-artwork/master/logo/nixos-white.png">
+              <img src="https://raw.githubusercontent.com/NixOS/nixos-homepage/main/public/logo/nixos-hires.png" width="400px" alt="NixOS logo">
+            </picture>
+          </a>
+        </p>
+
+        Congratulations on starting such a big undertaking! Please replace the **`Tracking Issue: ISSUENAME`** template above with a short title summarising what the tracking issue entails.
+
+        > [!NOTE]
+        > This issue template is intended for Nixpkgs contributors. Ensure you have bug triage rights in the Nixpkgs repository before starting.
+
+        ---
+  - type: "textarea"
+    id: "description"
+    attributes:
+      label: "Tracking Description"
+      description: |
+        Provide a brief summary of the project or multi-step effort. Explain why it is necessary and what the goals are.
+        You may include way to reproduce the problem, screenshots or any information that you find relevant.
+      placeholder: "We need to fix every single bug in Nixpkgs!"
+    validations:
+      required: true
+  - type: "textarea"
+    id: "tracked-issues"
+    attributes:
+      label: "Tracked Issues"
+      description: "Please reference tracked issues and pull requests here. Remember to add the `5.scope: tracked` label to all items referenced here."
+      placeholder: |
+        1. #23845 | policy: should we fix all bugs?
+        2. #23933 | treewide: fix all bugs
+        3. #23934 | treewide: fix all bugs, part 2
+    validations:
+      required: true
+  - type: "textarea"
+    id: "additional-issues"
+    attributes:
+      label: "Follow-up Issues"
+      description: "List any follow-up issues that need to be addressed after the main tasks are completed, or any notes related to the project's completion."
+      placeholder: "After fixing all the bugs, we should look into #23994, which reintroduces all of the bugs we will fix."
+    validations:
+      required: false
+  - type: "textarea"
+    id: "additional-context"
+    attributes:
+      label: "Additional Context"
+      description: "Add any other context about the tracking issue here."
+      placeholder: "This tracking issue will be resolved in the next NixCon sprint!"
+    validations:
+      required: false
+  - type: "markdown"
+    attributes:
+      value: |
+        # Thank you for contributing to Nixpkgs!
+
+        Please take a moment to add more relevant labels to this issue on the sidebar to the right. You might also want to assign a team or add this issue to a project.
+
+        ---
+  - type: "textarea"
+    id: "priorisation"
+    attributes:
+      label: "Is this issue important to you?"
+      description: |
+        **Please do not modify this text area!**
+
+        This template helps Nixpkgs developers know which issues should be prioritised by allowing users to vote with a :+1: reaction.
+        This is not a guarantee that highly-requested issues will be fixed first, but it helps us to figure out what's important to users. Please react on other users' issues if you find them important.
+      value: |
+        Add a :+1: [reaction] to [issues you find important].
+
+        [reaction]: https://github.blog/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/
+        [issues you find important]: https://github.com/NixOS/nixpkgs/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc
